@@ -1,6 +1,6 @@
 [![GitHub](https://img.shields.io/github/license/galen211/udacity-blockchain-developer?style=flat-square)](LICENSE.md)
 
-# Blockchain Development and Security Projects
+# Blockchain Development projects
 
 
 - [x] [Project 1: Create Your Own Private Blockchain](#project-1)
