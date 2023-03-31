@@ -55,4 +55,5 @@ More information about this project is available in the [project folder](/projec
 
 ### Project 6
 
+This is a repo to build your own full stack defi staking application for yield farming, borrowing and lending, or any other project you can think of. It allows you to
 More information about this project is available in the [project folder](/project6/)
