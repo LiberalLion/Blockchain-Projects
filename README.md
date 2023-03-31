@@ -8,7 +8,7 @@
 - [x] [Project 3: Ethereum Dapp for Tracking Items through Supply Chain](#project-3)
 - [x] [Project 4: FlightSurety](#project-4)
 - [x] [Project 5: Real Estate Marketplace](#project-5)
-- [ ] [Project 6: Full stack defi staking application for yield farming](#project-6)
+- [x] [Project 6: Full stack defi staking application for yield farming](#project-6)
 
 ## Github Repo Structure
 This repo is a [multi-root workspace](https://code.visualstudio.com/docs/editor/multi-root-workspaces) configured in [Visual Studio Code](https://code.visualstudio.com/).  To open the workspace in VS Code, open the `blockchain.code-workspace` file.  Each root is a project folder containing a project submission to the Blockchain Developer Nanodegree.  Each project contains a `README.md` file with further instructions on running the project code.
@@ -48,7 +48,13 @@ More information about this project is available in the [project folder](/projec
 ## Project 5 - **in progress**
 <img src="assets/undraw/project5.svg" width="200"/>
 
-### Capstone: Real Estate Marketplace
+### Real Estate Marketplace
 //TODO: complete project and summarize
 
 More information about this project is available in the [project folder](/project5/)
+
+## Project 6
+
+### Full stack defi staking application for yield farming
+This is a repo to build your own full stack defi staking application for yield farming, borrowing and lending, or any other project you can think of. It allows you to
+More information about this project is available in the [project folder](/project6/)
