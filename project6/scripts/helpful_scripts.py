@@ -27,9 +27,7 @@ def get_account(index=None, id=None):
         return accounts[index]
     if network.show_active() in LOCAL_BLOCKCHAIN_ENVIRONMENTS:
         return accounts[0]
-    if id:
-        return accounts.load(id)
-    return accounts.add(config["wallets"]["from_key"])
+    return accounts.load(id) if id else accounts.add(config["wallets"]["from_key"])
 
 
 # initalizer=box.store, 1
@@ -47,7 +45,7 @@ def encode_function_data(initializer=None, *args):
     Returns:
         [bytes]: Return the encoded bytes.
     """
-    if len(args) == 0 or not initializer:
+    if not args or not initializer:
         return eth_utils.to_bytes(hexstr="0x")
     return initializer.encode_input(*args)
 
@@ -74,14 +72,13 @@ def upgrade(
             transaction = proxy_admin_contract.upgrade(
                 proxy.address, new_implementation_address, {"from": account}
             )
+    elif initializer:
+        encoded_function_call = encode_function_data(initializer, *args)
+        transaction = proxy.upgradeToAndCall(
+            new_implementation_address, encoded_function_call, {"from": account}
+        )
     else:
-        if initializer:
-            encoded_function_call = encode_function_data(initializer, *args)
-            transaction = proxy.upgradeToAndCall(
-                new_implementation_address, encoded_function_call, {"from": account}
-            )
-        else:
-            transaction = proxy.upgradeTo(new_implementation_address, {"from": account})
+        transaction = proxy.upgradeTo(new_implementation_address, {"from": account})
     return transaction
 
 
